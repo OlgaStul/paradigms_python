@@ -22,7 +22,7 @@ def show_field():
 '''
 
 
-def input_x(symbol):
+def input_symbol(symbol):
     while True:
         s = int(input("Куда хотите поставить {}? Введие номер ячейки: ".format(symbol)))
         if 1 <= s <= 9:
@@ -72,9 +72,9 @@ def main():
     while True:
         show_field()
         if counter %2 == 0:
-            input_x('X')
+            input_symbol('X')
         else:
-            input_x('O')
+            input_symbol('O')
         if counter > 3:
             winning = check()       # метод возвращает победивший символ или False
             if winning:             # если мы получили любое истинное значение отличное от False
@@ -88,3 +88,8 @@ def main():
             break
 
 print(main())
+
+
+'''
+Используем процедурную парадигму
+'''
